@@ -1,0 +1,29 @@
+﻿<Window
+    x:Class="_03_DataBinding_ObservableCollection.BooksWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:_03_DataBinding_ObservableCollection"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="BooksWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ListBox
+            Grid.Row="0"
+            Margin="0,0,0,10"
+            DisplayMemberPath="Title"
+            ItemsSource="{Binding Books}" />
+        <Button
+            Grid.Row="1"
+            Width="120"
+            HorizontalAlignment="Left"
+            Click="AddBook_Click"
+            Content="Add New Book" />
+    </Grid>
+</Window>
