@@ -32,20 +32,15 @@ namespace _03_DataBinding_ObservableCollection
             };
 
             this.DataContext = currentBook;
-            UpdateStatusText();
+            // UpdateStatusText() više nije potreban!
         }
 
         private void MarkAsRead_Click(object sender, RoutedEventArgs e)
         {
             currentBook.IsRead = true;
-            // Problem: Status text se NE ažurira automatski!
-            // Moramo ručno:
-            UpdateStatusText();
+            // UI se automatski ažurira! ✅
         }
 
-        private void UpdateStatusText()
-        {
-            txtStatus.Text = currentBook.IsRead ? "✓ Read" : "✗ Not Read";
-        }
+        // UpdateStatusText() metod obrisan - više nije potreban
     }
 }
