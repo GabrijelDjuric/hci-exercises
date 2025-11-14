@@ -1,19 +1,74 @@
-# Visual Studio
-.vs/
-*.user
-*.suo
-*.db
-*.opendb
-*.log
-*.cache
-*.tlog
-
-# Build folderi
+## Build rezultati
 bin/
 obj/
-TestResults/
-Generated Files/
+[Bb]uild/
+[Ll]og/
+**/Generated*/ 
 
-# Paket menadžeri
-*.nuget/
+## User-specific fajlovi
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+## VS Code / Rider / Visual Studio
+.vscode/
+.idea/
+*.csproj.user
+
+## Cache, temp, backup
+*.cache
+*.bak
+*.tmp
+*.temp
+
+## Paket menadžeri
+# NuGet
+*.nupkg
 packages/
+.nuget/
+
+# Node (ako imaš front-end dio)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+## Publikovano
+publish/
+out/
+dist/
+
+## Auto-generisano
+*.dll
+*.pdb
+*.exe
+*.db
+*.mdb
+*.log
+*.tlog
+
+## Test rezultati
+TestResult*/
+TestResults/
+*.coverage
+*.coveragexml
+
+## ReSharper, Rider, JetBrains
+_ReSharper*/
+*.DotSettings.user
+*.DotCover
+
+## Entity Framework Migrations Snapshot (opcionalno)
+# !Migrations/
+# Migrations/*Designer.cs
+
+## Secret fajlovi
+appsettings.Development.json
+secrets.json
+
+## Docker
+**/mnt/
+**/.dockerignore
+
+.vs/
